@@ -33,11 +33,18 @@ function game() {
     let playerSelection = prompt("Player: Choose Rock, Paper or Scissors: ");
     let computerSelection = getComputerChoice()
     playRound(playerSelection, computerSelection);
-    console.log(`\nRound ${i}: ${playerSelection} vs ${computerSelection}`);
-    console.log(`Current Player Wins: ${playerWins}/${i}`);
-    
+    alert(`\nRound ${i}: ${playerSelection} vs ${computerSelection}\nCurrent Player Wins: ${playerWins}/${i}`);
+  }
+}
+
+function showWinner() {
+  if (playerWins >= 3) {
+    alert("WINNER: PLAYER")
+  } else {
+    alert("WINNER: COMPUTER")
   }
 }
 
 let playerWins = 0;
 game()
+showWinner()
